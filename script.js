@@ -44,6 +44,7 @@ function showQuestion(question) {
 }
 
 function resetState() {
+    clearStatusClass(document.body)
     nextButton.classList.add('hide')
     while (answerButtonsElement.firstChild) {
         answerButtonsElement.removeChild(answerButtonsElement.firstChild)
@@ -86,15 +87,27 @@ const questions = [
         question: 'What is 2 + 2 ? ',
         answers: [
             { text: '4', correct: true },
-                {text: '22', correct: false}
+            {text: '22', correct: false},
+            {text: '12', correct: false},
+            {text: '20', correct: false}
         ]
     },
     {
         question: 'What is 5 + 5 ? ',
         answers: [
             { text: '10', correct: true },
-                {text: '22', correct: false},
-                {text: '54', correct: false},
-                {text: '2', correct: false}
+            {text: '26', correct: false},
+            {text: '62', correct: false},
+            {text: '29', correct: false}
+        ]
+    },
+    {
+        question: 'What is 7 + 6 ? ',
+        answers: [
+            { text: '13', correct: true },
+            {text: '32', correct: false},
+            {text: '19', correct: false},
+            {text: '20', correct: false}
         ]
     }
+]
